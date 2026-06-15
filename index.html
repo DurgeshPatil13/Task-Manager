@@ -84,8 +84,30 @@
 </div>
  </div>
  <!-- white task bar  -->
-  <div class="w-[90%] mx-auto my-10 rounded-2xl   p-5 bg-white">
+  <div class="w-[90%]   mx-auto my-10 rounded-2xl md:flex md:flex-row flex flex-col gap-5   p-5 bg-white">
+<!-- input -->
+ <div class="md:w-140 h-15 w-full mx-auto flex justify-between  rounded-2xl">
+  <input type="text" class="h-full text-xl w-full rounded-2xl focus:outline-none px-2 font-['Syne'] border-gray-300 border-2" id="" placeholder="What needs to be done?">
+ </div>
+  <!--select options  -->
+ <div class="flex gap-4 md:w-140 w-full  md:mx-5">
+  <select class="flex-1 p-3 text-xl  rounded-xl focus:outline-none font-['Syne'] border-gray-300 border-2">
+    <option>Personal</option>
+    <option>Work</option>
+    <option>Study</option>
+   
+  </select>
 
+  <select class="flex-1 text-xl p-3 rounded-xl focus:outline-none font-['Syne'] border-gray-300 border-2">
+    <option>High</option>
+    <option>Medium</option>
+    <option>Low</option>
+  </select>
+</div>
+<!-- add task -->
+<div class="md:w-60 h-15 w-full  rounded-2xl border-2 border-gray-300 flex justify-center items-center">
+  <button class="lg:text-xl text-md duration-300 hover:scale-110 transition h-full w-full rounded-2xl"><i class="fa-solid fa-plus"></i> Add Task</button>
+</div>
   </div>
   
 </body>
