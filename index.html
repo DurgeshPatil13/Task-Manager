@@ -113,40 +113,40 @@
 
 
 
-   <section class="w-[90%] p-5 mx-auto flex justify-between  bg-blue-300  h-120 rounded-2xl mb-5">
+   <section class="w-[90%] sm:p-5 mx-auto lg:flex lg:flex-row flex flex-col gap-5 justify-between  rounded-2xl mb-5">
 <!-- left section -->
- <div class="w-[55%] h-full bg-white relative rounded-2xl hide-scrollbar overflow-y-auto  ">
+ <div class="lg:w-[55%] w-full h-full bg-white relative rounded-2xl hide-scrollbar overflow-y-auto  ">
 <!-- top bar -->
- <div class="h-13 p-8 w-full flex justify-between sticky top-0 z-50 pl-0 items-center    bg-white">
+ <div class="h-13 p-8 w-full flex justify-between sticky top-0 z-50 pl-0 items-center  bg-white">
 <!-- name  my tasks-->
- <div class="text-2xl font-bold ml-4 font-['Syne']">
+ <div class="sm:text-2xl text-xl font-bold ml-4 font-['Syne']">
   My Tasks
  </div>
  <!-- 3 buttons -->
   <div class="">
-    <button class="bg-black text-white px-4 py-1 rounded-3xl font-['Syne']">All</button>
-    <button class="border border-gray-300 text-[#919191] px-4 py-1 rounded-3xl font-['Syne']">Active</button>
-    <button class="border border-gray-300 text-[#919191]  px-4 py-1 rounded-3xl font-['Syne']">Completed</button>
+    <button class="bg-black text-white px-4 py-1 rounded-3xl text-sm sm:text:base font-['Syne']">All</button>
+    <button class="border border-gray-300 text-[#919191] text-sm sm:text:base px-4 py-1 rounded-3xl font-['Syne']">Active</button>
+   
   </div>
  </div>
  <!-- task div -->
   <div class="w-full h-90 p-3.5  ">
 <!-- task list  -->
- <div class="p-3 w-full mt-2 flex rounded-2xl border-2 border-[#8b8b8b3e] bg-white">
+ <div class="sm:p-3 p-2 w-full mt-2 flex rounded-2xl border-2 border-[#8b8b8b3e] bg-white">
 <!-- check box -->
- <div class="w-15 h-[4em] flex  justify-center items-center  ">
+ <div class="sm:w-15 w-12 h-[4em] flex  justify-center items-center  ">
  <!-- custom tick box -->
-  <div class="w-7 h-7  rounded-md border-2 text-white bg-[#8d7154e9] flex justify-center items-center border-gray-400">
+  <div class="w-7 h-7   rounded-md border-2 text-white bg-[#8d7154e9] flex justify-center items-center border-gray-400">
 <i class="fa-solid fa-check  "></i>
   </div>
   
  </div>
  <!-- main task -->
-  <div class="h-full text-xl  flex-1 font-['Syne']">
+  <div class="h-full w-full text-[16px] sm:text-xl  flex-1 font-['Syne']">
 
-Complete Day 15 - Objects & Prototypes
+Complete Day 15 - Objects & Prototypes 
 <!-- other info boxes -->
-<div class="w-full mt-1">
+<div class="w-full mt-2">
   <span class="bg-green-100 font-['Syne'] p-1 text-sm px-2 rounded-2xl">Study</span>
    <span class="bg-gray-100 font-['Syne'] p-1 text-sm px-2 rounded-2xl">High</span>
 </div>
@@ -155,13 +155,12 @@ Complete Day 15 - Objects & Prototypes
    <div class="flex gap-3 justify-center items-center">
 
     <button
-        class="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center"
-    >
+        class="sm:w-10 sm:h-10 w-8 h-8 ml-2 rounded-xl bg-gray-100 flex items-center justify-center">
         <i class="fa-solid fa-pen text-gray-500"></i>
     </button>
 
     <button
-        class="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center"
+        class="sm:w-10 sm:h-10 w-8 h-8 rounded-xl bg-gray-100 flex items-center justify-center"
     >
        <i class="fa-solid fa-trash-can text-gray-500"></i>
     </button>
@@ -175,6 +174,8 @@ Complete Day 15 - Objects & Prototypes
 
 
 
+
+
  
    
  
@@ -182,13 +183,34 @@ Complete Day 15 - Objects & Prototypes
  </div>
 <!--  -->
 <!-- wrapper for both boxes -->
-  <div class="flex flex-col gap-4 bg-blue-400">
+  <div class="flex flex-col lg:w-[40%] w-full gap-4  rounded-2xl ">
      <!-- the progress bar -->
-  <div class="h-45 w-140 rounded-2xl bg-red-400 ">
+  <div class="h-45  rounded-2xl bg bg-white p-5 font-semibold ">
+<!-- todays progress -->
+ <h3 class="text-3xl font-['Syne'] ">
+  Today's Progress
+ </h3>
+ <!-- progress bar div -->
+  <div class=" mt-4 h-[70%] p-5 pl-0 w-full">
+<!-- bar -->
+ <div class="bg-[#F0EDE7] w-full h-5 rounded-2xl">
+<div class="bg-[#9A8061] h-full w-[50%] rounded-2xl">
 
+</div>
+ </div>
+ <!-- number of bars -->
+  <div class="h-5 w-full  mt-1 flex justify-between">
+<span class="font-['Syne'] text-[#6c6c6c]">
+  7 of 12 done
+</span>
+<span class="font-['Syne'] text-[#6c6c6c]">
+  50%
+</span>
+  </div>
+  </div>
   </div>
 <!-- the category box -->
- <div class="h-60 w-140 rounded-2xl bg-red-400">
+ <div class="h-60  rounded-2xl bg-red-400">
 
  </div>
 
