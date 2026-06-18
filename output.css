@@ -8,11 +8,16 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-orange-400: oklch(75% 0.183 55.934);
+    --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-green-100: oklch(96.2% 0.044 156.743);
     --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-violet-500: oklch(60.6% 0.25 292.717);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -29,6 +34,9 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
@@ -203,6 +211,24 @@
   .z-50 {
     z-index: 50;
   }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -220,6 +246,9 @@
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
+  }
+  .mr-1 {
+    margin-right: var(--spacing);
   }
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
@@ -241,6 +270,12 @@
   }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .hidden\! {
+    display: none !important;
   }
   .table {
     display: table;
@@ -278,8 +313,8 @@
   .h-45 {
     height: calc(var(--spacing) * 45);
   }
-  .h-60 {
-    height: calc(var(--spacing) * 60);
+  .h-55 {
+    height: calc(var(--spacing) * 55);
   }
   .h-90 {
     height: calc(var(--spacing) * 90);
@@ -287,8 +322,14 @@
   .h-\[4em\] {
     height: 4em;
   }
+  .h-\[30\%\] {
+    height: 30%;
+  }
   .h-\[70\%\] {
     height: 70%;
+  }
+  .h-\[80\%\] {
+    height: 80%;
   }
   .h-full {
     height: 100%;
@@ -379,8 +420,15 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
   .border-\[\#8b8b8b3e\] {
     border-color: #8b8b8b3e;
+  }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
@@ -390,9 +438,6 @@
   }
   .bg-\[\#8a5cf68c\] {
     background-color: #8a5cf68c;
-  }
-  .bg-\[\#8d7154e9\] {
-    background-color: #8d7154e9;
   }
   .bg-\[\#9A8061\] {
     background-color: #9A8061;
@@ -420,9 +465,6 @@
   }
   .bg-green-100 {
     background-color: var(--color-green-100);
-  }
-  .bg-red-400 {
-    background-color: var(--color-red-400);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -469,17 +511,32 @@
   .pl-0 {
     padding-left: 0;
   }
-  .pl-1 {
-    padding-left: var(--spacing);
+  .font-\[\'\'\] {
+    font-family: '';
   }
-  .font-\[\'Lato\'\] {
-    font-family: 'Lato';
+  .font-\[\'C\'\] {
+    font-family: 'C';
+  }
+  .font-\[\'Commis\'\] {
+    font-family: 'Commis';
+  }
+  .font-\[\'Commissioner\'\] {
+    font-family: 'Commissioner';
+  }
+  .font-\[\'CommissionerCommissioner\'\] {
+    font-family: 'CommissionerCommissioner';
+  }
+  .font-\[\'Jost\'\] {
+    font-family: 'Jost';
   }
   .font-\[\'Outfit\'\] {
     font-family: 'Outfit';
   }
   .font-\[\'Syne\'\] {
     font-family: 'Syne';
+  }
+  .font-\[\'syne\'\] {
+    font-family: 'syne';
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -499,6 +556,9 @@
   .text-\[12px\] {
     font-size: 12px;
   }
+  .text-\[14px\] {
+    font-size: 14px;
+  }
   .text-\[16px\] {
     font-size: 16px;
   }
@@ -510,6 +570,18 @@
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
   }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
@@ -517,11 +589,14 @@
   .text-\[\#6c6c6c\] {
     color: #6c6c6c;
   }
-  .text-\[\#36474\] {
-    color: #36474;
+  .text-\[\#9A8061\] {
+    color: #9A8061;
   }
-  .text-\[\#36474f\] {
-    color: #36474f;
+  .text-\[\#808080\] {
+    color: #808080;
+  }
+  .text-\[\#808080cc\] {
+    color: #808080cc;
   }
   .text-\[\#828282\] {
     color: #828282;
@@ -543,6 +618,9 @@
   }
   .text-green-500 {
     color: var(--color-green-500);
+  }
+  .text-orange-400 {
+    color: var(--color-orange-400);
   }
   .text-violet-500 {
     color: var(--color-violet-500);
@@ -776,7 +854,7 @@
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Syne:wght@400..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Pliant:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Syne:wght@400..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Commissioner:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Pliant:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Syne:wght@400..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }

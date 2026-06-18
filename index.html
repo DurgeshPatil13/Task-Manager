@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <style>
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Syne:wght@400..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Syne:wght@400..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Commissioner:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Pliant:ital,wght@0,100..900;1,100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&family=Syne:wght@400..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 </style>
 </head>
 <body class="bg-[#F5F2ED]">
@@ -136,8 +136,8 @@
 <!-- check box -->
  <div class="sm:w-15 w-12 h-[4em] flex  justify-center items-center  ">
  <!-- custom tick box -->
-  <div class="w-7 h-7   rounded-md border-2 text-white bg-[#8d7154e9] flex justify-center items-center border-gray-400">
-<i class="fa-solid fa-check  "></i>
+  <div class="w-7 h-7 rounded-md border-2 text-white hidden:bg-[#8d7154e9]  flex justify-center items-center border-gray-400">
+<i class="fa-solid fa-check  hidden!"></i>
   </div>
   
  </div>
@@ -173,11 +173,6 @@ Complete Day 15 - Objects & Prototypes
 
 
 
-
-
-
- 
-   
  
   </div>
  </div>
@@ -200,24 +195,54 @@ Complete Day 15 - Objects & Prototypes
  </div>
  <!-- number of bars -->
   <div class="h-5 w-full  mt-1 flex justify-between">
-<span class="font-['Syne'] text-[#6c6c6c]">
+<span class="font-['Jost'] font-medium text-[#808080cc]">
   7 of 12 done
 </span>
-<span class="font-['Syne'] text-[#6c6c6c]">
+<span class="font-['Jost'] font-medium text-[#808080cc]">
   50%
 </span>
   </div>
   </div>
   </div>
 <!-- the category box -->
- <div class="h-60  rounded-2xl bg-red-400">
-
+ <div class="h-55  rounded-2xl bg-white  p-5 ">
+<h4 class="text-3xl font-['Syne'] font-semibold">
+  By Category
+</h4>
+<!-- category container -->
+ <div class="h-[80%] w-full   py-1 mt-2">
+<!-- 3 divs to contain names -->
+ <!-- 1 -->
+  <div class="h-[30%] w-full border-b-2 border-gray-200 text-xl font-['syne'] text-[#828282] flex justify-between items-center">
+    <span>
+<i class="fa-solid fa-circle-dot text-green-500 text-[14px] mr-1"></i>Study
+    </span>
+    <span>
+5 Tasks      
+    </span>
+  </div>
+  <!-- 2 -->
+   <div class="h-[30%] w-full border-b-2 border-gray-200  text-xl font-['syne'] text-[#828282] flex justify-between items-center">
+    <span>
+<i class="fa-solid fa-circle-dot text-[#9A8061] text-[14px] mr-1"></i>Work
+    </span>
+    <span>
+4 Tasks      
+    </span>
+  </div>
+   <!-- 3 -->
+   <div class="h-[30%] w-full  text-xl font-['syne'] text-[#828282] flex justify-between items-center">
+    <span>
+<i class="fa-solid fa-circle-dot text-orange-400 text-[14px] mr-1"></i>Personal
+    </span>
+    <span>
+2 Tasks      
+    </span>
+  </div>
+ </div>
  </div>
 
 </div>
-
-
-
 
 
    </section>
