@@ -27,7 +27,15 @@ darkmode?.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
     console.log("clicked");
 });
+const today = new Date();
 
+document.getElementById("date").textContent =
+  today.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
 let tasks = [];
 const data=localStorage.getItem("usertask");
 const userdata=JSON.parse(data);
